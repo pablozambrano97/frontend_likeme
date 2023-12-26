@@ -18,7 +18,7 @@ function App() {
 
   const agregarPost = async () => {
     const post = { titulo, url: imgSrc, descripcion };
-    if(!post.titulo || !post.url || post.descripcion){
+    if(!post.titulo || !post.url || !post.descripcion){
       alert('Todos los campos son obligatorios');
     }else{
       await axios.post(urlBaseServer + "/posts", post);
